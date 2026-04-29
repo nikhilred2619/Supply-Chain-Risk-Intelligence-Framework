@@ -1,0 +1,51 @@
+{
+  "rpn_cost_correlation": {
+    "r": 0.8605,
+    "p_value": 0.0
+  },
+  "performance": {
+    "rule_based": {
+      "Model": "Rule-Based",
+      "Accuracy": "87.5%",
+      "Precision": "80.0%",
+      "Recall": "100.0%",
+      "F1": "88.9%",
+      "AUC-ROC": "0.990"
+    },
+    "decision_tree": {
+      "Model": "Decision Tree",
+      "Accuracy": "83.3%",
+      "Precision": "83.3%",
+      "Recall": "83.3%",
+      "F1": "83.3%",
+      "AUC-ROC": "0.833"
+    },
+    "llm_fmea": {
+      "Model": "LLM-FMEA",
+      "Accuracy": "87.5%",
+      "Precision": "80.0%",
+      "Recall": "100.0%",
+      "F1": "88.9%",
+      "AUC-ROC": "0.990"
+    }
+  },
+  "mcnemar": {
+    "b": 0,
+    "d": 0,
+    "chi2": 0.0,
+    "p_value": 1.0,
+    "significant": false
+  },
+  "tier_distribution": {
+    "Critical": 24,
+    "High": 36,
+    "Medium": 42,
+    "Low": 18
+  },
+  "confusion_matrix_llm_fmea": {
+    "TP": 12,
+    "FP": 3,
+    "FN": 0,
+    "TN": 9
+  }
+}

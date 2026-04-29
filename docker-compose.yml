@@ -1,0 +1,52 @@
+version: "3.9"
+
+services:
+  # ── REST API ────────────────────────────────────────────────────────────────
+  llm-fmea-api:
+    build: .
+    container_name: llm_fmea_api
+    ports:
+      - "8000:8000"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+      - LOG_LEVEL=info
+    volumes:
+      - ./data:/app/data
+      - ./results:/app/results
+      - ./logs:/app/logs
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c",
+             "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+
+  # ── Streamlit Demo Dashboard ────────────────────────────────────────────────
+  llm-fmea-demo:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: llm_fmea_demo
+    command: ["streamlit", "run", "demo/dashboard.py",
+              "--server.port", "8501",
+              "--server.address", "0.0.0.0",
+              "--server.headless", "true",
+              "--browser.gatherUsageStats", "false"]
+    ports:
+      - "8501:8501"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+    volumes:
+      - ./data:/app/data
+      - ./results:/app/results
+    restart: unless-stopped
+    depends_on:
+      - llm-fmea-api
+
+# Usage:
+#   docker compose up --build
+#   API  → http://localhost:8000
+#   Docs → http://localhost:8000/docs
+#   Demo → http://localhost:8501
