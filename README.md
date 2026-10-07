@@ -13,12 +13,12 @@
 [![Streamlit](https://img.shields.io/badge/Streamlit-Demo-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
 [![Tests](https://img.shields.io/badge/Tests-27%20Passing-brightgreen?style=for-the-badge)](tests/)
-[![Paper](https://img.shields.io/badge/Paper-Under%20Review-red?style=for-the-badge)](https://orcid.org/0009-0006-7699-3928)
+[![Research](https://img.shields.io/badge/Research-Manuscript-blue?style=for-the-badge)](https://orcid.org/0009-0006-7699-3928)
 
 ---
 
 **Author:** Nikhil Reddy Donapati · Agentforce AI Specialist & Senior Salesforce Developer · Texas, USA  
-**ORCID:** [0009-0006-7699-3928](https://orcid.org/0009-0006-7699-3928) · **Paper:** *SN Computer Science / Cluster Computing (Under Review)*
+**ORCID:** [0009-0006-7699-3928](https://orcid.org/0009-0006-7699-3928) · **Research:** manuscript and reproducible implementation
 
 </div>
 
@@ -118,7 +118,7 @@ This is not an academic toy. It is the **first enterprise-deployable framework**
 │                                                                     │
 │  OpenAPI 3.0 REST API. SAP BTP, Oracle IC, Salesforce connectors.  │
 │  Streamlit demo dashboard. Dockerfile. Staged deployment roadmap.   │
-│  Not a proof-of-concept — a production-deployable system.           │
+│  Research prototype with production-oriented interfaces.           │
 └─────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -385,7 +385,7 @@ llm-fmea-scra/
 
 ## 🚀 Deployment
 
-### Staged Enterprise Adoption
+### Staged Deployment Roadmap
 
 ```
 Phase 1 — FMEA-Only Mode
@@ -420,7 +420,7 @@ This repository constitutes a citable, reproducible original contribution:
             Risk Assessment: A Parameterized Simulation and FMEA-Based Framework},
   author = {Donapati, Nikhil Reddy},
   year   = {2025},
-  note   = {Under Review — SN Computer Science},
+  note   = {Research manuscript},
   url    = {https://github.com/nikhildonapati/llm-fmea-scra}
 }
 ```
